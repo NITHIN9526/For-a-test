@@ -16,4 +16,4 @@ Professional portfolio for **Nithin**, a Computer Hardware Engineering student (
 - Deployed on Vercel: [nithin-uu-portfolio.vercel.app](https://nithin-uu-portfolio.vercel.app/)
 
 ## Repository
-Original repository name was `For-a-test`, now renamed to `portfolio`.
+Original repository name was `For-a-test`, now renamed to `Portfolio`.
