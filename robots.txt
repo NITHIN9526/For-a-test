@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nithin9526.github.io/For-a-test/sitemap.xml
+Sitemap: https://nithin-uu-portfolio.vercel.app/sitemap.xml
