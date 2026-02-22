@@ -25,10 +25,10 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 // ========== TYPEWRITER ==========
 const phrases = [
-    'Frontend Developer',
-    'UI/UX Enthusiast',
-    'Open Source Contributor',
-    'Creative Coder',
+    'Computer Hardware Engineer',
+    'Django Developer',
+    'Network Administrator',
+    'Embedded Systems Nerd',
 ];
 let pi = 0, ci = 0, deleting = false;
 const tw = document.getElementById('typewriter');

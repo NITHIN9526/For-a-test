@@ -70,6 +70,7 @@ a {
     display: inline-block;
     background: linear-gradient(135deg, var(--accent), var(--accent3));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: .85rem;
     font-weight: 700;
@@ -84,6 +85,7 @@ a {
     margin-bottom: 60px;
     background: linear-gradient(135deg, #fff 40%, var(--text-muted));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -309,6 +311,7 @@ a {
     line-height: 1;
     background: linear-gradient(135deg, #fff 20%, var(--accent2) 60%, var(--accent3));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 16px;
 }
@@ -495,6 +498,7 @@ a {
     font-weight: 800;
     background: linear-gradient(135deg, var(--accent), var(--accent3));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -510,6 +514,24 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
+    margin-bottom: 48px;
+}
+
+.skill-category-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--accent2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill-category-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
 }
 
 .skill-card {
@@ -951,6 +973,7 @@ a {
     margin-bottom: 12px;
     background: linear-gradient(135deg, #fff, var(--accent2));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
