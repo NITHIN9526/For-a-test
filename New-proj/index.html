@@ -320,6 +320,28 @@
     <!-- Back to top -->
     <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 
+    <!-- ========== SUCCESS MODAL ========== -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-box">
+            <div class="modal-icon">
+                <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="modal-circle" cx="26" cy="26" r="25" stroke="url(#grad)" stroke-width="2" />
+                    <path class="modal-check" d="M14 26l9 9 16-18" stroke="url(#grad)" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <defs>
+                        <linearGradient id="grad" x1="0" y1="0" x2="52" y2="52">
+                            <stop offset="0%" stop-color="#7c3aed" />
+                            <stop offset="100%" stop-color="#06b6d4" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <h3 class="modal-title">Message Sent! 🎉</h3>
+            <p class="modal-msg">Thank you for reaching out! I'll get back to you as soon as possible.</p>
+            <button class="btn btn-primary modal-close" id="modalClose">Got it 👍</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
