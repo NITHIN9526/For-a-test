@@ -106,40 +106,49 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ========== CONTACT FORM ==========
+// ========== CONTACT FORM (Google Forms) ==========
 const form = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 const submitBtn = document.getElementById('submitBtn');
+const hiddenIframe = document.getElementById('hidden_iframe');
+let formSubmitted = false;
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
+    // Client-side validation before allowing native POST to Google Forms
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
     if (!name || !email || !message) {
+        e.preventDefault();
         formStatus.textContent = '⚠️ Please fill in all required fields.';
         formStatus.className = 'form-status error';
         return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        e.preventDefault();
         formStatus.textContent = '⚠️ Please enter a valid email address.';
         formStatus.className = 'form-status error';
         return;
     }
 
+    // Validation passed — let form POST to Google via hidden iframe
+    formSubmitted = true;
     submitBtn.innerHTML = '<span>Sending...</span>';
     submitBtn.disabled = true;
+    formStatus.textContent = '';
+});
 
-    // Simulate sending
-    setTimeout(() => {
-        formStatus.textContent = '✅ Message sent! I\'ll get back to you soon.';
-        formStatus.className = 'form-status success';
-        form.reset();
-        submitBtn.innerHTML = '<span>Send Message 🚀</span>';
-        submitBtn.disabled = false;
-        setTimeout(() => { formStatus.textContent = ''; formStatus.className = 'form-status'; }, 6000);
-    }, 1800);
+// iframe loads after Google Forms accepts the submission
+hiddenIframe.addEventListener('load', () => {
+    if (!formSubmitted) return;
+    formSubmitted = false;
+    formStatus.textContent = '✅ Message sent! I\'ll get back to you soon.';
+    formStatus.className = 'form-status success';
+    form.reset();
+    submitBtn.innerHTML = '<span>Send Message 🚀</span>';
+    submitBtn.disabled = false;
+    setTimeout(() => { formStatus.textContent = ''; formStatus.className = 'form-status'; }, 6000);
 });
 
 // ========== SMOOTH HOVER TILT on Cards ==========

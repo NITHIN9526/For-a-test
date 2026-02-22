@@ -272,24 +272,30 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <form class="contact-form" id="contactForm" novalidate>
+                <!-- Contact Form — powered by Google Forms -->
+                <!-- Hidden iframe captures Google Form redirect without leaving your page -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                <form class="contact-form" id="contactForm"
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSed_jOq2ihU80AaNIQE10t82kmyb6s82Ghkfr-3FR1OmtBb5A/formResponse"
+                    method="POST" target="hidden_iframe">
+
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required />
+                        <input type="text" id="name" name="entry.1873736736" placeholder="John Doe" required />
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                        <input type="email" id="email" name="entry.824716757" placeholder="john@example.com" required />
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Project Collaboration" />
+                        <input type="text" id="subject" name="entry.1402763309" placeholder="Project Collaboration" />
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
-                            required></textarea>
+                        <textarea id="message" name="entry.181032171" rows="5"
+                            placeholder="Tell me about your project..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
                         <span>Send Message 🚀</span>
